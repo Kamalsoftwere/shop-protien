@@ -1,14 +1,22 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "shop-protien",
+  "description": "Kamal Dallasheh Premium Health Supplements Store - Full-stack MERN application with AI chatbot",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "author": "Kamal Dallasheh",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "cd server && npm start",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "seed": "curl -X POST http://localhost:5000/api/seed"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -86,5 +94,27 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
-  }
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "nodejs",
+    "mongodb",
+    "express",
+    "typescript",
+    "e-commerce",
+    "supplements",
+    "chatbot",
+    "ai",
+    "fitness",
+    "health"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/shop-protien.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/shop-protien/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/shop-protien#readme"
 }
