@@ -42,7 +42,9 @@ export const FavoritesProvider: React.FC<FavoritesProviderProps> = ({ children }
     
     try {
       setLoading(true);
+      console.log('Fetching favorites for user');
       const response = await api.get('/auth/favorites');
+      console.log('Favorites response:', response.data);
       setFavorites(response.data.favorites.map((product: any) => product._id));
     } catch (error) {
       console.error('Error fetching favorites:', error);

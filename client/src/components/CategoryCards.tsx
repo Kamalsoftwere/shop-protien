@@ -32,8 +32,14 @@ const CategoryCards = () => {
                 whitespace-pre-line
                 border-0 shadow-md transition
                 cursor-pointer
+                relative
               `}
             >
+              <img 
+                src="/muscle-icon.png" 
+                alt="Muscle Icon" 
+                className="absolute top-2 right-2 w-4 h-4 opacity-80"
+              />
               {category.name}
             </Button>
           ))}

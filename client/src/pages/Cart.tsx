@@ -68,7 +68,14 @@ const Cart = () => {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="text-center min-h-[400px] flex flex-col items-center justify-center">
-          <ShoppingCart className="w-16 h-16 text-muted-foreground mb-4" />
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <img 
+              src="/muscle-icon.png" 
+              alt="Muscle Icon" 
+              className="w-16 h-16"
+            />
+            <ShoppingCart className="w-16 h-16 text-muted-foreground" />
+          </div>
           <h2 className="text-2xl font-semibold text-foreground mb-2">Cart is Empty</h2>
           <p className="text-muted-foreground mb-6">You haven't added any products to your cart yet</p>
           <Button onClick={() => navigate('/')} className="bg-primary hover:bg-primary-hover">
@@ -90,7 +97,14 @@ const Cart = () => {
         >
           <ArrowLeft className="w-4 h-4" />
         </Button>
-        <h1 className="text-3xl font-bold text-foreground">Shopping Cart</h1>
+                  <div className="flex items-center gap-3">
+            <img 
+              src="/muscle-icon.png" 
+              alt="Muscle Icon" 
+              className="w-8 h-8"
+            />
+            <h1 className="text-3xl font-bold text-foreground">Shopping Cart</h1>
+          </div>
         <Badge variant="secondary" className="ml-2">
           {cart.items.length} items
         </Badge>

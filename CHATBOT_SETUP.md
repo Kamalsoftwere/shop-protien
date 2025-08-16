@@ -1,6 +1,6 @@
 # Chatbot Setup Guide
 
-## الميزات المضافة:
+
 
 ### 🤖 Professional Chatbot with OpenAI API
 - Integrates with OpenAI GPT-3.5-turbo

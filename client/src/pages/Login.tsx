@@ -75,9 +75,16 @@ const Login = () => {
         <div className="max-w-md mx-auto">
           <Card>
             <CardHeader className="text-center">
-              <CardTitle className="text-2xl font-bold text-primary">
-                Welcome Back
-              </CardTitle>
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <img 
+                  src="/muscle-icon.png" 
+                  alt="Muscle Icon" 
+                  className="w-8 h-8"
+                />
+                <CardTitle className="text-2xl font-bold text-primary">
+                  Welcome Back
+                </CardTitle>
+              </div>
               <p className="text-muted-foreground">
                 Sign in to your account to continue
               </p>

@@ -42,11 +42,16 @@ const CategoryProducts = () => {
       
       try {
         setLoading(true);
+        console.log('Fetching products for category:', category);
         const response = await axios.get(`http://localhost:5000/api/products/category/${category}`);
+        console.log('Response:', response.data);
+        
         const productsWithImages = response.data.products.map((product: any) => ({
           ...product,
           image: product.image.startsWith('/') ? `http://localhost:5000${product.image}` : product.image
         }));
+        
+        console.log('Products with images:', productsWithImages);
         setProducts(productsWithImages);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -89,11 +94,25 @@ const CategoryProducts = () => {
           >
             <ArrowLeft className="w-4 h-4" />
           </Button>
-          <h1 className="text-3xl font-bold text-foreground">{categoryName}</h1>
+          <div className="flex items-center gap-3">
+            <img 
+              src="/muscle-icon.png" 
+              alt="Muscle Icon" 
+              className="w-8 h-8"
+            />
+            <h1 className="text-3xl font-bold text-foreground">{categoryName}</h1>
+          </div>
         </div>
 
         {products.length === 0 ? (
           <div className="text-center py-12">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <img 
+                src="/muscle-icon.png" 
+                alt="Muscle Icon" 
+                className="w-12 h-12"
+              />
+            </div>
             <h2 className="text-xl font-semibold text-foreground mb-2">No products found</h2>
             <p className="text-muted-foreground mb-4">No products available in this category yet.</p>
             <Button onClick={() => navigate('/')}>

@@ -67,7 +67,10 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     
     try {
       setLoading(true);
+      console.log('Fetching cart for user');
       const response = await api.get('/cart');
+      console.log('Cart response:', response.data);
+      
       const cartWithImages = {
         ...response.data.cart,
         items: response.data.cart.items.map((item: any) => ({
@@ -78,6 +81,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
           }
         }))
       };
+      console.log('Cart with images:', cartWithImages);
       setCart(cartWithImages);
     } catch (error) {
       console.error('Error fetching cart:', error);

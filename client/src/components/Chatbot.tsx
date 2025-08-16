@@ -175,7 +175,11 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
         <div className="relative z-10 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="relative">
-              <Bot className="w-6 h-6 animate-pulse" />
+              <img 
+                src="/muscle-icon.png" 
+                alt="Muscle Icon" 
+                className="w-6 h-6 animate-pulse"
+              />
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
             </div>
             <div>
@@ -213,9 +217,13 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               <div className="flex items-start gap-2">
                 {message.sender === 'bot' && (
                   <div className="relative">
-                    <Bot className={`w-5 h-5 mt-1 flex-shrink-0 ${
-                      message.isMotivational ? 'animate-bounce' : 'animate-pulse'
-                    }`} />
+                    <img 
+                      src="/muscle-icon.png" 
+                      alt="Muscle Icon" 
+                      className={`w-5 h-5 mt-1 flex-shrink-0 ${
+                        message.isMotivational ? 'animate-bounce' : 'animate-pulse'
+                      }`}
+                    />
                     {message.isMotivational && (
                       <Sparkles className="absolute -top-1 -right-1 w-3 h-3 text-yellow-300" />
                     )}
@@ -284,7 +292,11 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
             <div className="bg-white border border-blue-100 rounded-2xl p-4 shadow-md">
               <div className="flex items-center gap-3">
                 <div className="relative">
-                  <Bot className="w-5 h-5 animate-bounce" />
+                  <img 
+                    src="/muscle-icon.png" 
+                    alt="Muscle Icon" 
+                    className="w-5 h-5 animate-bounce"
+                  />
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
                 </div>
                 <div className="flex space-x-1">

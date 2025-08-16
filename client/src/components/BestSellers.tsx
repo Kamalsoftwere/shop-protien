@@ -34,8 +34,10 @@ const BestSellers = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
+        console.log('Fetching all products for BestSellers');
         const response = await axios.get('http://localhost:5000/api/products');
         const serverProducts = response.data.products;
+        console.log('Server products:', serverProducts);
         
         // Use server images directly
         const productsWithImages = serverProducts.map((product: any) => ({
@@ -43,6 +45,7 @@ const BestSellers = () => {
           image: product.image.startsWith('/') ? `http://localhost:5000${product.image}` : product.image
         }));
         
+        console.log('Products with images:', productsWithImages);
         setProducts(productsWithImages);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -158,7 +161,14 @@ const BestSellers = () => {
             </div>
             ) : (
               <div className="text-center py-12">
-                <Search className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <img 
+                    src="/muscle-icon.png" 
+                    alt="Muscle Icon" 
+                    className="w-16 h-16"
+                  />
+                  <Search className="w-16 h-16 text-muted-foreground" />
+                </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">
                   No products found
                 </h3>
@@ -173,9 +183,16 @@ const BestSellers = () => {
           </div>
         ) : (
           <>
-            <h2 className="text-3xl font-bold text-center mb-10 text-foreground">
-              Best Sellers
-            </h2>
+            <div className="flex items-center justify-center gap-3 mb-10">
+              <img 
+                src="/muscle-icon.png" 
+                alt="Muscle Icon" 
+                className="w-10 h-10"
+              />
+              <h2 className="text-3xl font-bold text-foreground">
+                Best Sellers
+              </h2>
+            </div>
             {loading ? (
               <div className="flex items-center justify-center py-12">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>

@@ -14,7 +14,14 @@ const NotFound = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <img 
+            src="/muscle-icon.png" 
+            alt="Muscle Icon" 
+            className="w-12 h-12"
+          />
+          <h1 className="text-4xl font-bold">404</h1>
+        </div>
         <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
         <a href="/" className="text-blue-500 hover:text-blue-700 underline">
           Return to Home

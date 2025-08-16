@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { MessageCircle, X, Sparkles, Zap } from 'lucide-react';
 import Chatbot from './Chatbot';
 
+
 const ChatbotButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -43,7 +44,11 @@ const ChatbotButton: React.FC = () => {
           
           {/* Main icon */}
           <div className="relative z-10">
-            <MessageCircle className="w-7 h-7" />
+            <img 
+              src="/muscle-icon.png" 
+              alt="Muscle Icon" 
+              className="w-7 h-7"
+            />
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
           </div>
           

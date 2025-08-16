@@ -147,14 +147,18 @@ const ProductDetail = () => {
       
       try {
         setProductLoading(true);
+        console.log('Fetching product with ID:', id);
         const response = await axios.get(`http://localhost:5000/api/products/${id}`);
         const serverProduct = response.data.product;
+        console.log('Server product:', serverProduct);
         
         // Use server image directly
-        setProduct({
+        const productWithImage = {
           ...serverProduct,
           image: serverProduct.image.startsWith('/') ? `http://localhost:5000${serverProduct.image}` : serverProduct.image
-        });
+        };
+        console.log('Product with image:', productWithImage);
+        setProduct(productWithImage);
       } catch (error) {
         console.error('Error fetching product:', error);
         // Fallback to local data
@@ -250,7 +254,14 @@ const ProductDetail = () => {
 
           <div className="space-y-6">
             <div>
-              <h1 className="text-3xl font-bold text-primary mb-4">{product.name}</h1>
+              <div className="flex items-center gap-3 mb-4">
+                <img 
+                  src="/muscle-icon.png" 
+                  alt="Muscle Icon" 
+                  className="w-8 h-8"
+                />
+                <h1 className="text-3xl font-bold text-primary">{product.name}</h1>
+              </div>
 
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex items-center">{renderStars(product.rating)}</div>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-banner.jpg";
 
+
 const HeroBanner = () => {
   const scrollToProducts = () => {
     const productsSection = document.getElementById('products-section');
@@ -22,6 +23,13 @@ const HeroBanner = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white max-w-2xl px-4">
+        <div className="flex justify-center mb-4">
+          <img 
+            src="/muscle-icon.png" 
+            alt="Muscle Icon" 
+            className="w-16 h-16 md:w-20 md:h-20 animate-pulse"
+          />
+        </div>
         <h2 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
           NEW YEAR <span className="text-accent">DROP</span>
         </h2>

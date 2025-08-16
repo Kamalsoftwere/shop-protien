@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 
+
 interface User {
   _id: string;
   firstName: string;
@@ -66,8 +67,12 @@ const Header = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4 px-4 py-4">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-gradient-hero rounded-md flex items-center justify-center">
-            <span className="text-white font-bold text-lg">KD</span>
+          <div className="w-10 h-10 bg-gradient-hero rounded-md flex items-center justify-center relative">
+            <img 
+              src="/muscle-icon.png" 
+              alt="Muscle Icon" 
+              className="w-6 h-6 absolute inset-0 m-auto"
+            />
           </div>
           <span className="text-xl font-semibold text-foreground">KAMAL DALLASHEH</span>
         </div>
