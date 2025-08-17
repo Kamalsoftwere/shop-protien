@@ -26,10 +26,41 @@ const Header = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const userData = localStorage.getItem('user');
-    if (userData) {
-      setUser(JSON.parse(userData));
-    }
+    const checkAuthStatus = async () => {
+      const token = localStorage.getItem('token');
+      const userData = localStorage.getItem('user');
+      
+      if (token && userData) {
+        try {
+          // Verify token with server
+          const response = await fetch('http://localhost:5000/api/auth/me', {
+            headers: {
+              'Authorization': `Bearer ${token}`
+            }
+          });
+          
+          if (response.ok) {
+            const data = await response.json();
+            setUser(data.user);
+          } else {
+            // Token is invalid, clear localStorage
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            setUser(null);
+          }
+        } catch (error) {
+          // Network error or invalid token, clear localStorage
+          localStorage.removeItem('token');
+          localStorage.removeItem('user');
+          setUser(null);
+        }
+      } else {
+        // No token or user data, ensure user is null
+        setUser(null);
+      }
+    };
+
+    checkAuthStatus();
   }, []);
 
   const handleLogout = () => {

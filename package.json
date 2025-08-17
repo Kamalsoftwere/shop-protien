@@ -2,7 +2,7 @@
   "name": "shop-protien",
   "description": "Kamal Dallasheh Premium Health Supplements Store - Full-stack MERN application with AI chatbot",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "author": "Kamal Dallasheh",
   "license": "MIT",
@@ -16,7 +16,13 @@
     "server": "cd server && npm run dev",
     "client": "cd client && npm run dev",
     "install:all": "npm install && cd client && npm install && cd ../server && npm install",
-    "seed": "curl -X POST http://localhost:5000/api/seed"
+    "seed": "curl -X POST http://localhost:5000/api/seed",
+    "test": "echo \"No tests specified\" && exit 0",
+    "clean": "rm -rf node_modules client/node_modules server/node_modules",
+    "reset": "npm run clean && npm run install:all",
+    "build:all": "cd client && npm run build && cd ../server && npm run build",
+    "deploy:check": "npm run lint && npm run build:all",
+    "security:audit": "npm audit && cd client && npm audit && cd ../server && npm audit"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

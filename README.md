@@ -9,7 +9,8 @@ A high-quality health supplements store with a modern interface and advanced art
 - **Product Management**: Different categories (Protein, Creatine, Vegan)
 - **Favorites System**: Save your favorite products
 - **Shopping Cart**: Manage your purchases
-- **Login System**: Secure personal account
+- **Secure Login System**: Token-based authentication with server validation
+- **Auto-Logout**: Automatic logout for expired or invalid tokens
 - **Muscle Icon**: Distributed throughout the website
 
 ## 🛠️ Installation and Setup
@@ -171,10 +172,13 @@ shop-protien/
 
 ## 🔐 Security
 
-- **JWT Authentication**: Secure login
-- **Password Hashing**: Encrypted passwords
+- **JWT Authentication**: Secure login with token validation
+- **Password Hashing**: Encrypted passwords using bcrypt
 - **CORS Protection**: Protection from unauthorized requests
 - **Input Validation**: Input verification
+- **Token Validation**: Server-side token verification on every request
+- **Auto-Logout**: Automatic logout for expired or invalid tokens
+- **No Auto-Login**: Users must manually log in (no automatic login with saved credentials)
 
 ## 🛒 Shopping Features
 
@@ -192,6 +196,15 @@ shop-protien/
 - **Loading States**: Visual feedback during operations
 - **Error Handling**: User-friendly error messages
 - **Responsive Design**: Works on mobile and desktop
+
+## 🔄 Recent Updates
+
+### Version 1.1.0 - Security Improvements
+- ✅ **Removed Auto-Login**: Users must manually log in (no automatic login with saved credentials)
+- ✅ **Enhanced Token Validation**: Server-side token verification on every page load
+- ✅ **Auto-Logout**: Automatic logout for expired or invalid tokens
+- ✅ **Improved Security**: Better protection against unauthorized access
+- ✅ **Clean User Experience**: Fresh login experience for all users
 
 ## 📈 Future Development
 

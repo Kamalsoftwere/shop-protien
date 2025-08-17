@@ -15,10 +15,22 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import ChatbotButton from "./components/ChatbotButton";
+import { useEffect } from "react";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+// Clear any existing user data on app start
+const clearUserData = () => {
+  localStorage.removeItem('token');
+  localStorage.removeItem('user');
+};
+
+const App = () => {
+  useEffect(() => {
+    clearUserData();
+  }, []);
+
+  return (
   <QueryClientProvider client={queryClient}>
     <SearchProvider>
       <CartProvider>
@@ -45,6 +57,7 @@ const App = () => (
       </CartProvider>
     </SearchProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;
