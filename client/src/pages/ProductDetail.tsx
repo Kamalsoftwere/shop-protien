@@ -256,7 +256,7 @@ const ProductDetail = () => {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <img 
-                  src="muscle-icon.png" 
+                  src="favicon.png" 
                   alt="Muscle Icon" 
                   className="w-8 h-8"
                 />

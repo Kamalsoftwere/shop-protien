@@ -16,7 +16,7 @@ const NotFound = () => {
       <div className="text-center">
         <div className="flex items-center justify-center gap-3 mb-4">
           <img 
-            src="muscle-icon.png" 
+            src="favicon.png" 
             alt="Muscle Icon" 
             className="w-12 h-12"
           />

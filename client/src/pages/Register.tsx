@@ -107,7 +107,7 @@ const Register = () => {
             <CardHeader className="text-center">
               <div className="flex items-center justify-center gap-3 mb-2">
                 <img 
-                  src="muscle-icon.png" 
+                  src="favicon.png" 
                   alt="Muscle Icon" 
                   className="w-8 h-8"
                 />

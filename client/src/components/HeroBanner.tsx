@@ -25,7 +25,7 @@ const HeroBanner = () => {
       <div className="relative z-10 text-center text-white max-w-2xl px-4">
         <div className="flex justify-center mb-4">
           <img 
-            src="muscle-icon.png" 
+            src="favicon.png" 
             alt="Muscle Icon" 
             className="w-16 h-16 md:w-20 md:h-20 animate-pulse"
           />
