@@ -7,6 +7,11 @@ publish = "client/dist"
 NODE_VERSION = "18"
 
 [[redirects]]
+from = "/muscle-icon.png"
+to = "/muscle-icon.png"
+status = 200
+
+[[redirects]]
 from = "/*"
 to = "/index.html"
 status = 200
