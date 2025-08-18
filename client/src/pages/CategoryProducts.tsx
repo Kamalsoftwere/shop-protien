@@ -96,7 +96,7 @@ const CategoryProducts = () => {
           </Button>
           <div className="flex items-center gap-3">
             <img 
-              src="favicon.png" 
+              src="muscle-icon.png" 
               alt="Muscle Icon" 
               className="w-8 h-8"
             />
@@ -108,7 +108,7 @@ const CategoryProducts = () => {
           <div className="text-center py-12">
             <div className="flex items-center justify-center gap-3 mb-4">
               <img 
-                src="favicon.png" 
+                src="muscle-icon.png" 
                 alt="Muscle Icon" 
                 className="w-12 h-12"
               />

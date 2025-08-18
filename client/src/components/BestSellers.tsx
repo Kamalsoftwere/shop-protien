@@ -163,7 +163,7 @@ const BestSellers = () => {
               <div className="text-center py-12">
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <img 
-                    src="favicon.png" 
+                    src="muscle-icon.png" 
                     alt="Muscle Icon" 
                     className="w-16 h-16"
                   />
@@ -185,7 +185,7 @@ const BestSellers = () => {
           <>
             <div className="flex items-center justify-center gap-3 mb-10">
               <img 
-                src="favicon.png" 
+                src="muscle-icon.png" 
                 alt="Muscle Icon" 
                 className="w-10 h-10"
               />

@@ -36,7 +36,7 @@ const CategoryCards = () => {
               `}
             >
               <img 
-                src="favicon.png" 
+                src="muscle-icon.png" 
                 alt="Muscle Icon" 
                 className="absolute top-2 right-2 w-4 h-4 opacity-80"
               />

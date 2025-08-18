@@ -100,7 +100,7 @@ const Header = () => {
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 bg-gradient-hero rounded-md flex items-center justify-center relative">
             <img 
-              src="favicon.png" 
+              src="muscle-icon.png" 
               alt="Muscle Icon" 
               className="w-6 h-6 absolute inset-0 m-auto"
             />

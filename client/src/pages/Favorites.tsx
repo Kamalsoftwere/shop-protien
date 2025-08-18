@@ -87,7 +87,7 @@ const Favorites = () => {
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
             <img 
-              src="favicon.png" 
+              src="muscle-icon.png" 
               alt="Muscle Icon" 
               className="w-8 h-8"
             />
@@ -102,7 +102,7 @@ const Favorites = () => {
           <div className="text-center py-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <img 
-                src="favicon.png" 
+                src="muscle-icon.png" 
                 alt="Muscle Icon" 
                 className="w-16 h-16"
               />

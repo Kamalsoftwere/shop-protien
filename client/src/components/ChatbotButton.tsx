@@ -45,7 +45,7 @@ const ChatbotButton: React.FC = () => {
           {/* Main icon */}
           <div className="relative z-10">
             <img 
-              src="favicon.png" 
+              src="muscle-icon.png" 
               alt="Muscle Icon" 
               className="w-7 h-7"
             />
