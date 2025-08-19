@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
+import muscleIcon from "@/assets/muscle-icon.png";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -107,7 +108,7 @@ const Register = () => {
             <CardHeader className="text-center">
               <div className="flex items-center justify-center gap-3 mb-2">
                 <img 
-                  src="muscle-icon.png" 
+                  src={muscleIcon} 
                   alt="Muscle Icon" 
                   className="w-8 h-8"
                 />

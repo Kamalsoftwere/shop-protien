@@ -16,6 +16,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import muscleIcon from '@/assets/muscle-icon.png';
 
 const Cart = () => {
   const { cart, loading, updateCartItem, removeFromCart, clearCart } = useCart();
@@ -70,7 +71,7 @@ const Cart = () => {
         <div className="text-center min-h-[400px] flex flex-col items-center justify-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <img 
-              src="muscle-icon.png" 
+              src={muscleIcon} 
               alt="Muscle Icon" 
               className="w-16 h-16"
             />
@@ -99,7 +100,7 @@ const Cart = () => {
         </Button>
                   <div className="flex items-center gap-3">
             <img 
-              src="muscle-icon.png" 
+              src={muscleIcon} 
               alt="Muscle Icon" 
               className="w-8 h-8"
             />

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import muscleIcon from "@/assets/muscle-icon.png";
 
 const categories = [
   { name: "PROTEIN", color: "bg-primary", category: "protein" },
@@ -36,7 +37,7 @@ const CategoryCards = () => {
               `}
             >
               <img 
-                src="muscle-icon.png" 
+                src={muscleIcon} 
                 alt="Muscle Icon" 
                 className="absolute top-2 right-2 w-4 h-4 opacity-80"
               />
