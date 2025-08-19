@@ -7,6 +7,7 @@ import { useFavorites } from "@/contexts/FavoritesContext";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
+import muscleIcon from "@/assets/muscle-icon.png";
 
 
 interface User {
@@ -100,7 +101,7 @@ const Header = () => {
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 bg-gradient-hero rounded-md flex items-center justify-center relative">
             <img 
-              src="muscle-icon.png" 
+              src={muscleIcon} 
               alt="Muscle Icon" 
               className="w-6 h-6 absolute inset-0 m-auto"
             />
