@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { MessageCircle, Send, X, Bot, User, Sparkles, Trophy, Target, Zap, Star } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-// import muscleIcon from '@/assets/muscle-icon.png';
+import muscleIcon from '@/assets/muscle-icon.png';
 
 interface Message {
   id: string;
@@ -95,47 +95,6 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
     setIsLoading(true);
     setTypingEffect(true);
 
-    try {
-      const conversationHistory = messages
-        .filter(msg => !msg.isMotivational)
-        .map(msg => ({ role: msg.sender, content: msg.text }));
-
-      const response = await axios.post('http://localhost:5000/api/chatbot/chat', {
-        message: inputMessage,
-        conversationHistory
-      });
-
-      // Add motivational message occasionally (30% chance)
-      if (Math.random() < 0.3) {
-        setTimeout(() => addMotivationalMessage(), 1000);
-      }
-
-      const botMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        text: response.data.response,
-        sender: 'bot',
-        timestamp: new Date(),
-        products: response.data.products,
-      };
-
-      setTimeout(() => {
-        setMessages(prev => [...prev, botMessage]);
-        setTypingEffect(false);
-      }, 1500);
-
-    } catch (error) {
-      console.error('Chatbot error:', error);
-      const errorMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        text: 'Oops! Something went wrong, but don\'t worry - we\'ll get back on track! 💪',
-        sender: 'bot',
-        timestamp: new Date(),
-        isMotivational: true,
-        emoji: '💪'
-      };
-      setMessages(prev => [...prev, errorMessage]);
-      setTypingEffect(false);
-    } finally {
       setIsLoading(false);
     }
   };
@@ -186,9 +145,9 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
           <div className="flex items-center gap-2">
             <div className="relative">
               <img 
-                src={imageSrc} 
+                src={muscleIcon} 
                 alt="Muscle Icon"
-            onError={handleImageError} 
+             
                 className="w-6 h-6 animate-pulse"
               />
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
@@ -229,9 +188,9 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
                 {message.sender === 'bot' && (
                   <div className="relative">
                     <img 
-                      src={imageSrc} 
+                      src={muscleIcon} 
                       alt="Muscle Icon"
-            onError={handleImageError} 
+             
                       className={`w-5 h-5 mt-1 flex-shrink-0 ${
                         message.isMotivational ? 'animate-bounce' : 'animate-pulse'
                       }`}
@@ -305,9 +264,9 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <img 
-                    src={imageSrc} 
+                    src={muscleIcon} 
                     alt="Muscle Icon"
-            onError={handleImageError} 
+             
                     className="w-5 h-5 animate-bounce"
                   />
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>

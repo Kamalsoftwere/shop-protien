@@ -1,18 +1,9 @@
-import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-banner.jpg";
-// import muscleIcon from "@/assets/muscle-icon.png";   
+import muscleIcon from "@/assets/muscle-icon.png";   
 
 const HeroBanner = () => {
-  const [imageError, setImageError] = useState(false);
-  const [imageSrc, setImageSrc] = useState("/muscle-icon.png");
-
-  const handleImageError = () => {
-    if (!imageError) {
-      setImageError(true);
-      setImageSrc("muscle-icon.png");
-    }
-  };
   const scrollToProducts = () => {
     const productsSection = document.getElementById("products-section");
     if (productsSection) {
@@ -35,11 +26,11 @@ const HeroBanner = () => {
       <div className="relative z-10 text-center text-white max-w-2xl px-4">
         <div className="flex justify-center mb-4">
           <img
-            src={imageSrc}
+            src={muscleIcon}
             alt="Muscle Icon"
             className="w-16 h-16 md:w-20 md:h-20 animate-pulse relative z-20 opacity-100"
             loading="eager"
-            onError={handleImageError}
+            
             style={{ 
               display: 'block',
               position: 'relative',
