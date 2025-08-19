@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-banner.jpg";
-import muscleIcon from "@/assets/muscle-icon.png";   
+// import muscleIcon from "@/assets/muscle-icon.png";   
 
 const HeroBanner = () => {
   const scrollToProducts = () => {
@@ -25,7 +25,7 @@ const HeroBanner = () => {
       <div className="relative z-10 text-center text-white max-w-2xl px-4">
         <div className="flex justify-center mb-4">
           <img
-            src={muscleIcon}
+            src="/muscle-icon.png"
             alt="Muscle Icon"
             className="w-16 h-16 md:w-20 md:h-20 animate-pulse relative z-20 opacity-100"
             loading="eager"

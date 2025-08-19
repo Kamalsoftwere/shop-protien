@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { MessageCircle, X, Sparkles, Zap } from 'lucide-react';
 import Chatbot from './Chatbot';
-import muscleIcon from '@/assets/muscle-icon.png';
+// import muscleIcon from '@/assets/muscle-icon.png';
 
 
 const ChatbotButton: React.FC = () => {
@@ -46,7 +46,7 @@ const ChatbotButton: React.FC = () => {
           {/* Main icon */}
           <div className="relative z-10">
             <img 
-              src={muscleIcon} 
+              src="/muscle-icon.png" 
               alt="Muscle Icon" 
               className="w-7 h-7"
             />
