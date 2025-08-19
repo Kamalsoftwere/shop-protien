@@ -7,6 +7,7 @@ import ProductCard from '@/components/ProductCard';
 import { useFavorites } from '@/contexts/FavoritesContext';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import muscleIcon from '@/assets/muscle-icon.png';
 
 interface Product {
   _id: string;
@@ -87,7 +88,7 @@ const Favorites = () => {
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
             <img 
-              src="muscle-icon.png" 
+              src={muscleIcon} 
               alt="Muscle Icon" 
               className="w-8 h-8"
             />

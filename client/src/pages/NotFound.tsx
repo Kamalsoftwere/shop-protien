@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import muscleIcon from "@/assets/muscle-icon.png";
 
 const NotFound = () => {
   const location = useLocation();
@@ -16,7 +17,7 @@ const NotFound = () => {
       <div className="text-center">
         <div className="flex items-center justify-center gap-3 mb-4">
           <img 
-            src="muscle-icon.png" 
+            src={muscleIcon} 
             alt="Muscle Icon" 
             className="w-12 h-12"
           />
