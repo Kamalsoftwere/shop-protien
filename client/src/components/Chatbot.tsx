@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { MessageCircle, Send, X, Bot, User, Sparkles, Trophy, Target, Zap, Star } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import muscleIcon from '@/assets/muscle-icon.png';
 
 interface Message {
   id: string;
@@ -176,7 +177,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
           <div className="flex items-center gap-2">
             <div className="relative">
               <img 
-                src="muscle-icon.png" 
+                src={muscleIcon} 
                 alt="Muscle Icon" 
                 className="w-6 h-6 animate-pulse"
               />
@@ -218,7 +219,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
                 {message.sender === 'bot' && (
                   <div className="relative">
                     <img 
-                      src="muscle-icon.png" 
+                      src={muscleIcon} 
                       alt="Muscle Icon" 
                       className={`w-5 h-5 mt-1 flex-shrink-0 ${
                         message.isMotivational ? 'animate-bounce' : 'animate-pulse'
@@ -293,7 +294,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <img 
-                    src="muscle-icon.png" 
+                    src={muscleIcon} 
                     alt="Muscle Icon" 
                     className="w-5 h-5 animate-bounce"
                   />
