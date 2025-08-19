@@ -6,6 +6,15 @@ import Chatbot from './Chatbot';
 
 
 const ChatbotButton: React.FC = () => {
+  const [imageError, setImageError] = useState(false);
+  const [imageSrc, setImageSrc] = useState("/muscle-icon.png");
+
+  const handleImageError = () => {
+    if (!imageError) {
+      setImageError(true);
+      setImageSrc("muscle-icon.png");
+    }
+  };
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -46,8 +55,9 @@ const ChatbotButton: React.FC = () => {
           {/* Main icon */}
           <div className="relative z-10">
             <img 
-              src="/muscle-icon.png" 
-              alt="Muscle Icon" 
+              src={imageSrc} 
+              alt="Muscle Icon"
+            onError={handleImageError} 
               className="w-7 h-7"
             />
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>

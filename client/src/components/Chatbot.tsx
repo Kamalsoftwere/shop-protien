@@ -24,6 +24,15 @@ interface ChatbotProps {
 }
 
 const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
+  const [imageError, setImageError] = useState(false);
+  const [imageSrc, setImageSrc] = useState("/muscle-icon.png");
+
+  const handleImageError = () => {
+    if (!imageError) {
+      setImageError(true);
+      setImageSrc("muscle-icon.png");
+    }
+  };
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -177,8 +186,9 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
           <div className="flex items-center gap-2">
             <div className="relative">
               <img 
-                src="/muscle-icon.png" 
-                alt="Muscle Icon" 
+                src={imageSrc} 
+                alt="Muscle Icon"
+            onError={handleImageError} 
                 className="w-6 h-6 animate-pulse"
               />
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
@@ -219,8 +229,9 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
                 {message.sender === 'bot' && (
                   <div className="relative">
                     <img 
-                      src="/muscle-icon.png" 
-                      alt="Muscle Icon" 
+                      src={imageSrc} 
+                      alt="Muscle Icon"
+            onError={handleImageError} 
                       className={`w-5 h-5 mt-1 flex-shrink-0 ${
                         message.isMotivational ? 'animate-bounce' : 'animate-pulse'
                       }`}
@@ -294,8 +305,9 @@ const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <img 
-                    src="/muscle-icon.png" 
-                    alt="Muscle Icon" 
+                    src={imageSrc} 
+                    alt="Muscle Icon"
+            onError={handleImageError} 
                     className="w-5 h-5 animate-bounce"
                   />
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
